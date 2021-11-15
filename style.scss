@@ -50,3 +50,26 @@ input {
     color: green;
   }
 }
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid black;
+
+  &.centered-horizontally {
+    @include center("horizontal");
+  }
+
+  &.centered-vertically {
+    @include center("vertical");
+  }
+
+  &.centered-horizontally-and-vertically {
+    @include center("both");
+  }
+}
+
+.rgb-gradient {
+  @include linear-gradient(to right, yellow, green, red);
+}
