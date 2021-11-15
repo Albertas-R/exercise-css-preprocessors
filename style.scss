@@ -18,3 +18,35 @@ body {
 .header-title {
   color: $sda-color;
 }
+
+// v1
+// .short-note,
+// .short-note-2 {
+//   max-width: 200px;
+//   @include su-taskais;
+// }
+
+// v2
+.short-note,
+.short-note-2 {
+  @include su-taskais(200px);
+}
+
+// v3 be įvestos reikšmės
+// .short-note,
+// .short-note-2 {
+//   @include su-taskais;
+// }
+
+// https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms#fonts_and_text
+input {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.sda-input {
+  @include contentas {
+    font-weight: bold;
+    color: green;
+  }
+}

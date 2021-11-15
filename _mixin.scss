@@ -1,0 +1,40 @@
+// v1
+// @mixin su-taskais {
+//   display: inline-block;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// v2
+// @mixin su-taskais($max-width) {
+//   display: inline-block;
+//   max-width: $max-width;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+// }
+
+// v3
+@mixin su-taskais($max-width: 300px) {
+  display: inline-block;
+  max-width: $max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin contentas {
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

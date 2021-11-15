@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .sda-navbar {
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: #661570;
 }
@@ -40,6 +40,37 @@ body {
 
 .header-title {
   color: #55125e;
+}
+
+.short-note,
+.short-note-2 {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.sda-input:-moz-placeholder {
+  font-weight: bold;
+  color: green;
+}
+.sda-input::-moz-placeholder {
+  font-weight: bold;
+  color: green;
+}
+.sda-input::-webkit-input-placeholder {
+  font-weight: bold;
+  color: green;
+}
+.sda-input:-ms-input-placeholder {
+  font-weight: bold;
+  color: green;
 }
 
 /*# sourceMappingURL=style.css.map */
