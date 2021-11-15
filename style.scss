@@ -68,8 +68,22 @@ input {
   &.centered-horizontally-and-vertically {
     @include center("both");
   }
+
+  // Task 5: Mixins - expansion
+  // .box stiliuje nes aukstesnis specifiskumas, jei butu atskira klase butu specifiskumas mazesnis ir .box.pvz butu vaizduojami
+  &.object-size {
+    @include adding-object-sizes(200px, 100px);
+  }
+
+  &.object-position {
+    @include absolute-position(200px, auto, 0px, auto);
+  }
 }
 
 .rgb-gradient {
   @include linear-gradient(to right, yellow, green, red);
+}
+
+.new-font {
+  @include font-effect(16);
 }

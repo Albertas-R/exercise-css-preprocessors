@@ -70,3 +70,31 @@
   background: -moz-linear-gradient($direction, $gradients);
   background: -ms-linear-gradient($direction, $gradients);
 }
+
+// Task 5: Mixins - expansion
+// As part of this task, you need to expand the existing mixin file with:
+
+// * adding object sizes (width, height), where the default value for height is width,
+
+@mixin adding-object-sizes($plotis, $aukstis) {
+  width: $plotis;
+  height: $plotis;
+}
+
+// * determining the absolute position for an element with declaring values for top, right, bottom and left,
+
+@mixin absolute-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// * determining the font size, line height and spacing between characters (font-size, line-height and letter-spacing), where the line-height value should be set as the result of multiplication of font-size and 1.5, and letter-spacing should be normal by default; additionally, it is possible to convert values from pixels to rem unit, where 1 rem equals 16px
+
+@mixin font-effect($font-size) {
+  font-size: $font-size * 1px;
+  line-height: $font-size * 1.5px;
+  letter-spacing: normal;
+}
